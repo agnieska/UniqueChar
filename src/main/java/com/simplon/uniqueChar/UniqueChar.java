@@ -1,5 +1,8 @@
 package com.simplon.uniqueChar;
 
+
+import java.util.*;
+
 /**
  * Created by Agnieszka on 14/02/17.
  */
@@ -9,9 +12,9 @@ public class UniqueChar
 
         static boolean verifUniqueCaracters(String mot) {
 
-
-
             boolean sontUnique=true;
+                if ((mot == null) || (mot==""))
+                   sontUnique = false;
             for (int i = 0; i< mot.length(); i++) {
                 char c=mot.charAt(i);
                 for (int j=0;j< mot.length(); j++ ) {
@@ -21,7 +24,8 @@ public class UniqueChar
             }
 
             return sontUnique;
-        }
+    }
+
 
 
         public static void main(String[] args){
