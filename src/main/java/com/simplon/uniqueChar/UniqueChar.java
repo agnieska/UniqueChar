@@ -12,19 +12,21 @@ public class UniqueChar
 
         static boolean verifUniqueCaracters(String mot) {
 
-            boolean sontUnique=true;
-                if ((mot == null) || (mot==""))
-                   sontUnique = false;
-            for (int i = 0; i< mot.length(); i++) {
-                char c=mot.charAt(i);
-                for (int j=0;j< mot.length(); j++ ) {
-                    if (  (i!=j) && c == (char)mot.charAt(j))
-                        sontUnique=false;
+boolean isUnique = true;
+            if ((mot == null) || (mot == ""))
+                isUnique= false;
+            else
+                for (int i = 0; i < mot.length(); i++) {
+                    char c = mot.charAt(i);
+                    for (int j = 0; j < mot.length(); j++) {
+                        if ((i != j) && c == (char) mot.charAt(j)) {
+                            isUnique = false;
+                            break;
+                        } else isUnique= true;
+                    }
                 }
-            }
-
-            return sontUnique;
-    }
+      return isUnique;
+        }
 
 
 
